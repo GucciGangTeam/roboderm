@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  roboderm-web-api:
+    build: roboderm-site/
+    ports:
+      - 8080:8080
+    networks:
+      - roboderm-network
+
+  roboderm-neural-network:
+    build: neural-network/
+    ports:
+      - 5000:5000
+    networks:
+      - roboderm-network
+
+networks:
+  roboderm-network:
+    driver: bridge
