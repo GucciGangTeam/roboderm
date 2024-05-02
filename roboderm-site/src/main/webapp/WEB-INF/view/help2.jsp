@@ -7,12 +7,13 @@
     <title>Roboderm: пополнение набора данных</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href=${pageContext.request.contextPath}/styles/style.css >
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container">
-    <a class="navbar-brand" href="../">Roboderm</a>
+    <a class="navbar-brand adapt_text" href="../">Roboderm</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -20,10 +21,10 @@
       <ul class="navbar-nav">
 
         <li class="nav-item">
-          <a class="nav-link" href="../analysis/tocheck">Распознавание заболеваний</a>
+          <a class="nav-link adapt_text" href="../analysis/tocheck">Распознавание заболеваний</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="#">Загрузка изображений в набор данных</a>
+          <a class="nav-link active adapt_text" href="#">Загрузка изображений в набор данных</a>
         </li>
 
       </ul>
@@ -38,7 +39,7 @@
     <img src = "${pageContext.request.contextPath}/images/logotip.png" class="image-fluid" style="max-width: 30%;" alt="logotip">
   </div>
 
-  <div class="help2_info">
+  <div class="help2_info adapt_text">
   <h5>На этой странице Вы можете пополнить набор данных, загрузив фотографию с указанным кожным заболеванием, тем самым 
     Вы помогаете проекту: нейросеть научится точнее определять кожные заболевания.</h5>
   </div>
@@ -46,7 +47,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-7">
-        <div class="container-form">
+        <div class="container-form ">
           <form action="../diagnoses/downloaded" method="post" enctype="multipart/form-data">
           <!-- {% csrf_token %} -->
             <select name="dir_name">
@@ -75,9 +76,9 @@
       </div>
     <div class="col-lg-5" >
       <div class="container_help py-4">
-        <h4>Инструкция по загрузке изображения в набор данных:</h4>
+        <h4 class="adapt_text">Инструкция по загрузке изображения в набор данных:</h4>
         <br>
-        <ol>
+        <ol class="adapt_text_less">
           <li> Из выпадающегося списка выберите наименование заболевания</li>
           <li> Нажмите на кнопку "Выбор файла" и выберите нужное изображение в формате jpg</li>
           <li> Нажмите кнопку "Отправить"</li>

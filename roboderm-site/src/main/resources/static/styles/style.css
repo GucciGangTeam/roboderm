@@ -1,3 +1,145 @@
+@media (max-width: 380px) {
+    .adapt_text {
+        font-size: 1.5rem;
+    }
+    .adapt_text_less {
+        font-size: 1.45rem;
+    }
+    .added_file_icon{
+        display: block;
+        position: absolute;
+        width: 6rem;
+        height: 6rem;
+        opacity: 0;
+        background-color: brown;
+        margin-left: 6rem;
+    }
+}
+@media (min-width: 381px) and (max-width: 460px) {
+    .adapt_text {
+        font-size: 1.5rem;
+    }
+    .adapt_text_less {
+        font-size: 1.45rem;
+    }
+    .added_file_icon{
+        display: block;
+        position: absolute;
+        width: 9rem;
+        height: 6.5rem;
+        opacity: 0;
+        background-color: brown;
+        margin-left: 6rem;
+    }
+}
+@media (min-width: 461px) and (max-width: 639px) {
+    .adapt_text {
+        font-size: 1.5rem;
+    }
+    .adapt_text_less {
+        font-size: 1.45rem;
+    }
+    .added_file_icon {
+        display: block;
+        position: absolute;
+        width: 9rem;
+        height: 9rem;
+        opacity: 0;
+        background-color: brown;
+        margin-left: 9rem;
+    }
+
+}
+@media (min-width: 640px) and (max-width: 767px) {
+    .adapt_text {
+        font-size: 1.75rem;
+    }
+    .adapt_text_less {
+        font-size: 1.60rem;
+    }
+    .added_file_icon{
+        display: block;
+        position: absolute;
+        width: 9rem;
+        height: 9rem;
+        opacity: 0;
+        background-color: brown;
+        margin-left: 9rem;
+    }
+}
+
+@media (min-width: 767px) and (max-width: 991px) {
+        .adapt_text {
+            font-size: 1.75rem;
+        }
+    .adapt_text_less {
+        font-size: 1.60rem;
+    }
+    .added_file_icon{
+        display: block;
+        position: absolute;
+        width: 11rem;
+        height: 13rem;
+        opacity: 0;
+        background-color: brown;
+        margin-left: 15rem;
+    }
+}
+
+
+@media (min-width: 992px) and (max-width: 1024px) {
+    .adapt_text {
+        font-size: 1.5rem;
+    }
+    .adapt_text_less {
+        font-size: 1.45rem;
+    }
+    .added_file_icon{
+        display: block;
+        position: absolute;
+        width: 11rem;
+        height: 12rem;
+        opacity: 0;
+        background-color: brown;
+        margin-left: 11rem;}
+}
+@media (min-width: 1024px) and (max-width: 1280px) {
+    .adapt_text {
+        font-size: 1.3rem;
+    }
+    .adapt_text_less {
+        font-size: 1.3rem;
+    }
+    .added_file_icon{
+        display: block;
+        position: absolute;
+        width: 11rem;
+        height: 12rem;
+        opacity: 0;
+        background-color: brown;
+        margin-left: 11rem;
+    }
+}
+
+@media (min-width: 1281px)  {
+    .adapt_text {
+        font-size: 1.25rem;
+    }
+    .adapt_text_less {
+        font-size: 1.25rem;
+    }
+    .added_file_icon{
+        display: block;
+        position: absolute;
+        width: 11rem;
+        height: 12rem;
+        opacity: 0;
+        background-color: brown;
+        margin-left: 11rem;
+    }
+}
+
+
 body{
     background-color:rgb(0, 166, 255);
 }
@@ -11,6 +153,10 @@ div.logotip{
     background-color:white;
 
 }
+.downloaded_file_icon{
+    display: flex;
+    justify-content: center;
+}
 .accordion{
     margin-top: 50px;
 
@@ -18,6 +164,14 @@ div.logotip{
 .accordion-body{
     background-color:  rgba(133, 203, 240, 0.575);
     
+}
+.add_file{
+    display: block;
+    position: absolute;
+    width: 14%;
+    height: 37%;
+    opacity: 0;
+    background-color: brown;
 }
 .conteiner_home{
     padding-right: 5%;
@@ -40,7 +194,10 @@ div.logotip{
     border-radius: 15px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-.error_info{
+
+.btn{
+    text-decoration: none;
+    /*color: brown;*/
 
 }
 .help2_info{
