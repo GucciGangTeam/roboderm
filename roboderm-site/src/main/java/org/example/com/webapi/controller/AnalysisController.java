@@ -34,8 +34,6 @@ public class AnalysisController {
         ModelAndView modelAndView = new ModelAndView("work"); // Имя JSP файла
         if (!file.isEmpty()) {
             try {
-                System.out.println("begin");
-
                 String base64Encoded = Base64.getEncoder().encodeToString(file.getBytes());
                 String imgData = "data:image/jpeg;base64," + base64Encoded;
                 modelAndView.addObject("imageSrc", imgData);
@@ -55,11 +53,8 @@ public class AnalysisController {
                 body.add("image", fileResource);
 
                 HttpEntity<MultiValueMap<String, Object>> requestEntity = new HttpEntity<>(body, headers);
-                System.out.println("Before request");
 
                 ResponseEntity<String> response = restTemplate.postForEntity(neuralNetworkUrl, requestEntity, String.class);
-
-                System.out.println("After request");
 
                 // Обработка JSON-ответа
                 ObjectMapper objectMapper = new ObjectMapper();

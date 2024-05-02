@@ -10,7 +10,7 @@
 
 More some docker commands:
 * `docker-compose dawn` stop and delete containers
-* `docker-compose logs -f [service name]` show logs
+* `docker-compose logs -f` show logs
 * `docker-compose ps` show all running containers
 * `docker-compose exec [service name] [command]` run command in running container
 * `docker-compose images` show all images

@@ -4,7 +4,7 @@ services:
   roboderm-web-api:
     build: roboderm-site/
     ports:
-      - 8080:8080
+      - 80:80
     networks:
       - roboderm-network
 
