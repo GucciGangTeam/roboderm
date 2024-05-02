@@ -40,6 +40,9 @@ div.logotip{
     border-radius: 15px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+.error_info{
+
+}
 .help2_info{
     background-color: rgba(133, 203, 240, 0.575);
     /* margin-top: 50px;
