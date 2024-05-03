@@ -29,7 +29,7 @@
                   <a class="nav-link adapt_text " href="diagnoses/todownload">Загрузка изображений в набор данных</a>
                 </li>
                   <li class = "nav-item">
-                      <a class="nav-link adapt_text" href="error.jsp">Error</a>
+                      <a class="nav-link adapt_text" href="error/show">Error</a>
                   </li>
         
               </ul>

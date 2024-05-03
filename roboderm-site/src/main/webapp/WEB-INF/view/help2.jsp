@@ -49,7 +49,7 @@
       <div class="col-lg-7">
         <div class="container-form ">
           <form action="../diagnoses/downloaded" method="post" enctype="multipart/form-data">
-          <!-- {% csrf_token %} -->
+
             <select name="dir_name">
               <option value="Acne">Acne</option>
               <option value="Actinic Keratosis">Actinic Keratosis</option>
@@ -67,10 +67,14 @@
             </select>
             <br>
             <br>
-            <input type="file" name="myfile1">
+<%--            <input type="file" name="myfile1">--%>
+            <div class="image-upload-container">
+              <img src="${pageContext.request.contextPath}/images/download2.png" class="upload-image">
+              <input type="file" name="myfile1" class="file-input">
+            </div>
             <br>
             <br>
-            <button type="submit">Отправить</button>
+            <button type="submit" class="form_btn">Отправить</button>
           </form>
         </div>  
       </div>

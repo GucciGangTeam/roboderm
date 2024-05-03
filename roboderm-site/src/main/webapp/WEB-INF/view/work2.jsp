@@ -46,14 +46,19 @@
           <br>
           <form action="checked" method="post" enctype="multipart/form-data">
 
-              <input type="file" name="myfile1" class="added_file_icon">
+<%--              <input type="file" name="myfile1" class="added_file_icon">--%>
 
-            <div class="downloaded_file_icon">
-              <img src = "${pageContext.request.contextPath}/images/download2.png" class="image-fluid" style="max-width: 30%;"
-                   alt="download file">
+<%--            <div class="downloaded_file_icon">--%>
+<%--              <img src = "${pageContext.request.contextPath}/images/download2.png" class="image-fluid" style="max-width: 30%;"--%>
+<%--                   alt="download file">--%>
+<%--            </div>--%>
+            <div class="image-upload-container">
+              <img src="${pageContext.request.contextPath}/images/download2.png" class="upload-image">
+              <input type="file" name="myfile1" class="file-input">
             </div>
-              <br><br>
-              <button type="submit">Отправить</button>
+
+            <br><br>
+              <button type="submit" class="form_btn">Отправить</button>
           </form>
         </div>  
       </div>

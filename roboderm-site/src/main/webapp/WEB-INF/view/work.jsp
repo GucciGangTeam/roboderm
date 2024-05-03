@@ -47,9 +47,13 @@
           <br>
           <form action="checked" method="post" enctype="multipart/form-data">
             
-              <input type="file" name="myfile1">
+<%--              <input type="file" name="myfile1">--%>
+              <div class="image-upload-container">
+                <img src="${pageContext.request.contextPath}/images/download2.png" class="upload-image">
+                <input type="file" name="myfile1" class="file-input">
+              </div>
               <br><br>
-              <button type="submit">Отправить</button>
+              <button type="submit" class="form_btn">Отправить</button>
           </form>
         </div>  
       </div>
