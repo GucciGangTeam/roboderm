@@ -1,6 +1,6 @@
-@media only screen and (min-device-width : 900px) and (max-device-width : 1280px) {
-    /*Ширина блока контейнера 100% + убрать прочие привязки в 900 px*/
-}
+/*@media only screen and (min-device-width : 900px) and (max-device-width : 1280px) {*/
+/*    !*Ширина блока контейнера 100% + убрать прочие привязки в 900 px*!*/
+/*}*/
 
 @media (max-width: 639px) {
     .adapt_text {
@@ -17,15 +17,7 @@
     .adapt_text_less {
         font-size: 1.60rem;
     }
-    /*.added_file_icon{*/
-    /*    display: block;*/
-    /*    position: absolute;*/
-    /*    width: 9rem;*/
-    /*    height: 9rem;*/
-    /*    opacity: 0;*/
-    /*    background-color: brown;*/
-    /*    margin-left: 9rem;*/
-    /*}*/
+
 }
 
 @media (min-width: 767px) and (max-width: 991px) {
@@ -35,15 +27,7 @@
     .adapt_text_less {
         font-size: 1.60rem;
     }
-    /*.added_file_icon{*/
-    /*    display: block;*/
-    /*    position: absolute;*/
-    /*    width: 11rem;*/
-    /*    height: 13rem;*/
-    /*    opacity: 0;*/
-    /*    background-color: brown;*/
-    /*    margin-left: 15rem;*/
-    /*}*/
+
 }
 
 
@@ -54,14 +38,7 @@
     .adapt_text_less {
         font-size: 1.45rem;
     }
-    /*.added_file_icon{*/
-    /*    display: block;*/
-    /*    position: absolute;*/
-    /*    width: 11rem;*/
-    /*    height: 12rem;*/
-    /*    opacity: 0;*/
-    /*    background-color: brown;*/
-    /*    margin-left: 11rem;}*/
+
 }
 @media (min-width: 1024px) and (max-width: 1280px) {
     .adapt_text {
@@ -70,15 +47,7 @@
     .adapt_text_less {
         font-size: 1.3rem;
     }
-    /*.added_file_icon{*/
-    /*    display: block;*/
-    /*    position: absolute;*/
-    /*    width: 11rem;*/
-    /*    height: 12rem;*/
-    /*    opacity: 0;*/
-    /*    background-color: brown;*/
-    /*    margin-left: 11rem;*/
-    /*}*/
+
 }
 
 @media (min-width: 1281px)  {
@@ -88,20 +57,48 @@
     .adapt_text_less {
         font-size: 1.25rem;
     }
-    /*.added_file_icon{*/
-    /*    display: block;*/
-    /*    position: absolute;*/
-    /*    width: 11rem;*/
-    /*    height: 12rem;*/
-    /*    opacity: 0;*/
-    /*    background-color: brown;*/
-    /*    margin-left: 11rem;*/
-    /*}*/
+
 }
 
 html, body {width:100%; overflow-x:hidden} /*чтобы нормально отображались страници( не уходили в бок при маленьком разрешении )*/
 body{
     background-color:rgb(0, 166, 255);
+}
+
+.site-footer {
+    background-color: #3f5f7e;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-content {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+}
+
+.contact-email {
+    color: #CCFFFF;
+    text-decoration: none;
+}
+
+.contact-email:hover {
+    text-decoration: underline;
+}
+
+.home-btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.home-btn:hover {
+    background-color: #0056B3;
 }
 
 h6{
@@ -222,7 +219,7 @@ div.logotip{
     border-radius: 13px;
 }
 
-.img404{
+.img_error{
     display:flex ;
     justify-content: center;
     /*background-color:white;*/

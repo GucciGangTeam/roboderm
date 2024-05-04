@@ -29,9 +29,11 @@
                   <a class="nav-link adapt_text " href="diagnoses/todownload">Загрузка изображений в набор данных</a>
                 </li>
                   <li class = "nav-item">
-                      <a class="nav-link adapt_text" href="error/show">Error</a>
+                      <a class="nav-link adapt_text" href="error/show404">Error404</a>
                   </li>
-        
+                  <li class = "nav-item">
+                      <a class="nav-link adapt_text" href="error/show500">Error500</a>
+                  </li>
               </ul>
             </div>
           </div>
@@ -139,9 +141,17 @@
         </h6>
     </p>
 
-    <br>
+
 
 </div>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <h2>Свяжитесь с нами</h2>
+            <p>Если у вас есть вопросы или предложения, пожалуйста, напишите нам:</p>
+            <a href="mailto:04200620z@gmail.com" class="contact-email">04200620z@gmail.com</a>
+            <p>Мы всегда рады помочь вам!</p>
+        </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 
