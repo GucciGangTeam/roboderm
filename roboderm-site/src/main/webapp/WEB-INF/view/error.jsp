@@ -43,7 +43,11 @@
     <h1 class="errorh1">У-упс!</h1>
     <h2 class="errorh2">404 - Страница не найдена</h2>
     <p class="errorP">Возможно, страница, которую вы ищете, была удалена, ее имя было изменено, или она временно недоступна.</p>
-    <a href="/" class="home-btn">Вернуться на Главную</a>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <a href="/" class="interactive-btn">Вернуться на Главную</a>
 </div>
 <br><br><br><br><br><br><br><br><br><br><br><br><br>
 

@@ -429,7 +429,7 @@
             </div>
             <br>
             <br>
-            <button type="submit" class="form_btn">Отправить</button>
+            <button type="submit" class="interactive-btn">Отправить</button>
           </form>
         </div>
       </div>
