@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ERROR</title>
+    <title>ERROR 500</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href=${pageContext.request.contextPath}/styles/style.css >
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,15 +39,14 @@
     <img src = "${pageContext.request.contextPath}/images/500_2.png" class="image-fluid" style="max-width: 30%;" alt="logotip">
 </div>
 
-
-
 <div class="error-container ">
     <h1 class="errorh1">У-упс!</h1>
     <h2 class="errorh2">500 - Внутренняя ошибка сервера</h2>
     <p class="errorP">Извините, на нашей стороне произошла ошибка. Пожалуйста, попробуйте позже или свяжитесь с поддержкой, если проблема сохранится.</p>
     <a href="/" class="home-btn">Вернуться на Главную</a>
-
 </div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
