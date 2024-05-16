@@ -113,15 +113,30 @@ div.logotip{
 
 }
 .image-upload-container {
-    position: relative;
-    width: 30%; /* Желаемая ширина изображения */
+
+    max-width: 100%; /* Желаемая ширина изображения */
     height: auto; /* Желаемая высота изображения */
-    cursor: pointer; /* Показать, что можно кликнуть на изображение */
+
     display: flex;
     justify-content: center;
     padding-top: 2%;
 }
-
+.image-upload-container2{
+    cursor: pointer; /* Показать, что можно кликнуть на изображение */
+    width: 30%;
+    position: relative;
+}
+.img-preview-container{
+    padding-top: 5%;
+    height: auto;
+    max-width: 100%; /* Максимальная ширина контейнера, чтобы изображение не выходило за его пределы */
+}
+.img-preview{
+    max-width: 80%; /* Максимальная ширина изображения, чтобы оно масштабировалось в соответствии с размером контейнера */
+    height: auto; /* Автоматическая высота, чтобы изображение сохраняло пропорции */
+    display: block; /* Для корректного отображения и масштабирования изображения */
+    margin: 0 auto; /* Центрирование изображения в контейнере */
+}
 .upload-image {
     width: 100%;
     height: 100%;
@@ -177,7 +192,11 @@ div.logotip{
 .btn{
     text-decoration: none;
     /*color: brown;*/
-
+}
+.btn-container{
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
 }
 .help2_info{
     background-color: rgba(133, 203, 240, 0.575);
@@ -230,8 +249,20 @@ div.logotip{
 .control-label{
     font-weight: 500;
 }
+.container-result{
 
-
+    background-color: rgba(133, 203, 240, 0.575);
+    margin: 2%;
+    padding: 4%;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.img-result-container{
+    max-width: 100%;
+}
+.img-result{
+    width: 50%;
+}
 
 
 
@@ -250,7 +281,7 @@ div.logotip{
     /*margin-top: 40px;*/
     margin-top: 20px;
     letter-spacing: 4px;
-
+    width: 80%;
     border-radius: 13px;
 }
 .interactive-btn {

@@ -7,6 +7,7 @@
     <title>Roboderm: пополнение набора данных</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href=${pageContext.request.contextPath}/styles/style.css >
+  <script src=”${pageContext.request.contextPath}scripts/myScript.js”></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
@@ -44,217 +45,6 @@
     Вы помогаете проекту: нейросеть научится точнее определять кожные заболевания.</h5>
   </div>
   
-<%--  <div class="container">--%>
-<%--    <div class="row">--%>
-<%--      <div class="col-lg-7">--%>
-<%--        <div class="container-form ">--%>
-<%--&lt;%&ndash;          <form action="../diagnoses/downloaded" method="post" enctype="multipart/form-data">&ndash;%&gt;--%>
-
-<%--&lt;%&ndash;            <select name="dir_name">&ndash;%&gt;--%>
-<%--&lt;%&ndash;              <option value="Acne">Acne</option>&ndash;%&gt;--%>
-<%--&lt;%&ndash;              <option value="Actinic Keratosis">Actinic Keratosis</option>&ndash;%&gt;--%>
-<%--&lt;%&ndash;              <option value="Atopic Dermatit">Atopic Dermatit</option>&ndash;%&gt;--%>
-<%--&lt;%&ndash;              <option value="Contact Dermatitis">Contact Dermatitis</option>&ndash;%&gt;--%>
-<%--&lt;%&ndash;              <option value="Eczema">Eczema</option>&ndash;%&gt;--%>
-<%--&lt;%&ndash;              <option value="Hemangioma">Hemangioma</option>&ndash;%&gt;--%>
-<%--&lt;%&ndash;              <option value="Herpes">Herpes</option>&ndash;%&gt;--%>
-<%--&lt;%&ndash;              <option value="Psoriasis">Psoriasis</option>&ndash;%&gt;--%>
-<%--&lt;%&ndash;              <option value="Rosacea">Rosacea</option>&ndash;%&gt;--%>
-<%--&lt;%&ndash;              <option value="Scabies">Scabies</option>&ndash;%&gt;--%>
-<%--&lt;%&ndash;              <option value="Urticaria">Urticaria</option>&ndash;%&gt;--%>
-<%--&lt;%&ndash;              <option value="Vasculitis">Vasculitis</option>&ndash;%&gt;--%>
-<%--&lt;%&ndash;              <option value="Warts">Warts</option>&ndash;%&gt;--%>
-<%--&lt;%&ndash;            </select>&ndash;%&gt;--%>
-<%--&lt;%&ndash;            <br>&ndash;%&gt;--%>
-<%--&lt;%&ndash;            <br>&ndash;%&gt;--%>
-
-<%--&lt;%&ndash;            <div class="image-upload-container">&ndash;%&gt;--%>
-<%--&lt;%&ndash;              <img src="${pageContext.request.contextPath}/images/download2.png" class="upload-image">&ndash;%&gt;--%>
-<%--&lt;%&ndash;              <input type="file" name="myfile1" class="file-input">&ndash;%&gt;--%>
-<%--&lt;%&ndash;            </div>&ndash;%&gt;--%>
-<%--&lt;%&ndash;            <br>&ndash;%&gt;--%>
-<%--&lt;%&ndash;            <br>&ndash;%&gt;--%>
-<%--&lt;%&ndash;            <button type="submit" class="form_btn">Отправить</button>&ndash;%&gt;--%>
-<%--&lt;%&ndash;          </form>&ndash;%&gt;--%>
-<%--  <form class="row g-3" action="../diagnoses/downloaded" method="post" enctype="multipart/form-data">--%>
-<%--    <div class="col-md-6">--%>
-<%--      <select name="dir_name" class="form-select" required>--%>
-<%--        <option selected disabled value="">Выберите диагноз</option>--%>
-<%--        <option value="Acne">Acne</option>--%>
-<%--        <option value="Actinic Keratosis">Actinic Keratosis</option>--%>
-<%--        <option value="Atopic Dermatit">Atopic Dermatit</option>--%>
-<%--        <option value="Contact Dermatitis">Contact Dermatitis</option>--%>
-<%--        <option value="Eczema">Eczema</option>--%>
-<%--        <option value="Hemangioma">Hemangioma</option>--%>
-<%--        <option value="Herpes">Herpes</option>--%>
-<%--        <option value="Psoriasis">Psoriasis</option>--%>
-<%--        <option value="Rosacea">Rosacea</option>--%>
-<%--        <option value="Scabies">Scabies</option>--%>
-<%--        <option value="Urticaria">Urticaria</option>--%>
-<%--        <option value="Vasculitis">Vasculitis</option>--%>
-<%--        <option value="Warts">Warts</option>--%>
-<%--      </select>--%>
-<%--    </div>--%>
-<%--    <div class="col-md-6">--%>
-<%--      <select name="dir_name" class="form-select" required>--%>
-<%--        <option selected disabled value="">Выберите фототип кожи</option>--%>
-<%--        <option value="Nord">Нордический</option>--%>
-<%--        <option value="Evro">Темный европейский</option>--%>
-<%--        <option value="Sredizemn">Средиземноморский</option>--%>
-<%--        <option value="Indonez">Индонезийский</option>--%>
-<%--        <option value="Afro">Афроамериканский</option>--%>
-<%--      </select>--%>
-<%--    </div>--%>
-<%--    <div class="col-md-6">--%>
-<%--      <input type="number" class="form-control" id="ageInput" name="age"  placeholder="Введите возраст" required>--%>
-<%--    </div>--%>
-<%--    <div class="col-md-6">--%>
-<%--      <input type="number" class="form-control" id="diametrInput" name="diametr"  placeholder="Введите диаметр в миллиметрах" required>--%>
-<%--    </div>--%>
-<%--    <div class="col-md-6">--%>
-<%--      <input type="number" class="form-control" id="daysInput" name="days"  placeholder="Введите длительность заболевания \n в днях" required>--%>
-<%--    </div>--%>
-<%--    <div class="col-md-6">--%>
-<%--      <label for="feelingsInput" class="form-label">Субъективные ощущения</label>--%>
-<%--      <input type="text" class="form-control" id="feelingsInput" name="feelings"  placeholder="Зуд, жжение, боль..." required>--%>
-<%--    </div>--%>
-<%--    <div class="col-md-6">--%>
-<%--      <label for="feelingsInput" class="form-label">Локализация</label>--%>
-<%--      <input type="text" class="form-control" id="placeInput" name="place"  placeholder="Часть тела" required>--%>
-<%--    </div>--%>
-
-<%--    <fieldset class="col-md-6">--%>
-<%--      <legend class="col-form-label col-sm-2 pt-0">Пол обследуемого</legend>--%>
-<%--      <div class="col-sm-10">--%>
-<%--        <div class="form-check form-check-inline">--%>
-<%--          <input class="form-check-input" type="radio" name="gender" id="gridRadios1" value="option1" required>--%>
-<%--          <label class="form-check-label" for="gridRadios1">--%>
-<%--            Женский--%>
-<%--          </label>--%>
-<%--        </div>--%>
-<%--        <div class="form-check form-check-inline">--%>
-<%--          <input class="form-check-input" type="radio" name="gender" id="gridRadios2" value="option2" >--%>
-<%--          <label class="form-check-label" for="gridRadios2">--%>
-<%--            Мужской--%>
-<%--          </label>--%>
-<%--        </div>--%>
-<%--      </div>--%>
-<%--    </fieldset>--%>
-
-<%--    <fieldset class="col-md-6">--%>
-<%--      <legend class="col-form-label col-sm-2 pt-0">Семейный анамнез</legend>--%>
-<%--      <div class="col-sm-10">--%>
-<%--        <div class="form-check form-check-inline">--%>
-<%--          <input class="form-check-input" type="radio" name="anamnez" id="gridRadios3" value="option1" required>--%>
-<%--          <label class="form-check-label" for="gridRadios3">--%>
-<%--            Отягощен--%>
-<%--          </label>--%>
-<%--        </div>--%>
-<%--        <div class="form-check form-check-inline">--%>
-<%--          <input class="form-check-input" type="radio" name="anamnez" id="gridRadios4" value="option2">--%>
-<%--          <label class="form-check-label" for="gridRadios4">--%>
-<%--            Неотягощен--%>
-<%--          </label>--%>
-<%--        </div>--%>
-<%--      </div>--%>
-<%--    </fieldset>--%>
-
-<%--    <fieldset class="col-md-6">--%>
-<%--      <legend class="col-form-label col-sm-2 pt-0">Наличие изъявления</legend>--%>
-<%--      <div class="col-sm-10">--%>
-<%--        <div class="form-check form-check-inline">--%>
-<%--          <input class="form-check-input" type="radio" name="gender" id="gridRadios5" value="option1" required>--%>
-<%--          <label class="form-check-label" for="gridRadios5">--%>
-<%--            Имеется--%>
-<%--          </label>--%>
-<%--        </div>--%>
-<%--        <div class="form-check form-check-inline">--%>
-<%--          <input class="form-check-input" type="radio" name="gender" id="gridRadios6" value="option2" >--%>
-<%--          <label class="form-check-label" for="gridRadios2">--%>
-<%--            Не имеется--%>
-<%--          </label>--%>
-<%--        </div>--%>
-<%--      </div>--%>
-<%--    </fieldset>--%>
-<%--    <fieldset class="col-md-6">--%>
-<%--      <legend class="col-form-label col-sm-2 pt-0">Было увеличение в течение года</legend>--%>
-<%--      <div class="col-sm-10">--%>
-<%--        <div class="form-check form-check-inline">--%>
-<%--          <input class="form-check-input" type="radio" name="gender" id="gridRadios7" value="option1" required>--%>
-<%--          <label class="form-check-label" for="gridRadios7">--%>
-<%--            Нет--%>
-<%--          </label>--%>
-<%--        </div>--%>
-<%--        <div class="form-check form-check-inline">--%>
-<%--          <input class="form-check-input" type="radio" name="gender" id="gridRadios8" value="option2" >--%>
-<%--          <label class="form-check-label" for="gridRadios8">--%>
-<%--            Да--%>
-<%--          </label>--%>
-<%--        </div>--%>
-<%--      </div>--%>
-<%--    </fieldset>--%>
-
-<%--    <fieldset class="col-md-6">--%>
-<%--      <legend class="col-form-label col-sm-2 pt-0">Имеются солнечные ожоги</legend>--%>
-<%--      <div class="col-sm-10">--%>
-<%--        <div class="form-check form-check-inline">--%>
-<%--          <input class="form-check-input" type="radio" name="gender" id="gridRadios9" value="option1" required>--%>
-<%--          <label class="form-check-label" for="gridRadios9">--%>
-<%--            Нет--%>
-<%--          </label>--%>
-<%--        </div>--%>
-<%--        <div class="form-check form-check-inline">--%>
-<%--          <input class="form-check-input" type="radio" name="gender" id="gridRadios10" value="option2" >--%>
-<%--          <label class="form-check-label" for="gridRadios10">--%>
-<%--            Да--%>
-<%--          </label>--%>
-<%--        </div>--%>
-<%--      </div>--%>
-<%--    </fieldset>--%>
-<%--    <fieldset class="col-md-6">--%>
-<%--      <legend class="col-form-label col-sm-2 pt-0">Было ли длительное пребывание на солнце</legend>--%>
-<%--      <div class="col-sm-10">--%>
-<%--        <div class="form-check form-check-inline">--%>
-<%--          <input class="form-check-input" type="radio" name="gender" id="gridRadios11" value="option1" required>--%>
-<%--          <label class="form-check-label" for="gridRadios11">--%>
-<%--            Нет--%>
-<%--          </label>--%>
-<%--        </div>--%>
-<%--        <div class="form-check form-check-inline">--%>
-<%--          <input class="form-check-input" type="radio" name="gender" id="gridRadios12" value="option2" >--%>
-<%--          <label class="form-check-label" for="gridRadios12">--%>
-<%--            Да--%>
-<%--          </label>--%>
-<%--        </div>--%>
-<%--      </div>--%>
-<%--    </fieldset>--%>
-
-<%--    <div class="image-upload-container">--%>
-<%--      <img src="${pageContext.request.contextPath}/images/download2.png" class="upload-image">--%>
-<%--      <input type="file" name="myfile1" class="file-input">--%>
-<%--    </div>--%>
-<%--    <br>--%>
-<%--    <br>--%>
-<%--    <button type="submit" class="form_btn">Отправить</button>--%>
-<%--  </form>--%>
-<%--        </div>  --%>
-<%--      </div>--%>
-<%--      <div class="col-lg-5" >--%>
-<%--        <div class="container_help py-4">--%>
-<%--          <h4 class="adapt_text">Инструкция по загрузке изображения в набор данных:</h4>--%>
-<%--          <br>--%>
-<%--          <ol class="adapt_text_less">--%>
-<%--            <li> Из выпадающегося списка выберите наименование заболевания</li>--%>
-<%--            <li> Нажмите на кнопку "Выбор файла" и выберите нужное изображение в формате jpg</li>--%>
-<%--            <li> Нажмите кнопку "Отправить"</li>--%>
-<%--          </ol>--%>
-<%--        </div>--%>
-<%--      </div>--%>
-<%--    </div>--%>
-<%--  </div>--%>
-
-
-
 
   <div class="container">
     <div class="row">
@@ -318,7 +108,7 @@
 
 
             <fieldset class="form-group">
-              <legend class="col-form-label col-sm-2 pt-0">Пол обследуемого</legend>
+              <label class="control-label ">Пол обследуемого</label>
 <%--              <label class="control-label " for="gender">Пол обследуемого</label>--%>
               <div class="col-sm-10" id="gender">
                 <div class="form-check form-check-inline">
@@ -422,14 +212,37 @@
                 </div>
               </div>
             </div>
-
             <div class="image-upload-container ">
+            <div class="image-upload-container2">
               <img src="${pageContext.request.contextPath}/images/download2.png" class="upload-image">
-              <input type="file" name="myfile1" class="file-input">
+              <input type="file" name="myfile1" onchange="previewFile()" class="file-input">
+              <script>function previewFile(){
+                var preview = document.querySelector('.img-preview'); //selects the query named img
+                var file    = document.querySelector('input[type=file]').files[0]; //sames as here
+                var reader  = new FileReader();
+
+                reader.onloadend = function () {
+                  preview.src = reader.result;
+                }
+
+                if (file) {
+                  reader.readAsDataURL(file); //reads the data as a URL
+                } else {
+                  preview.src = "";
+                }
+              }</script>
+<%--              <input type="file" onchange="previewFile()"><br>--%>
+            </div>
+            </div>
+
+            <div class="img-preview-container">
+              <img class="img-preview" alt="">
             </div>
             <br>
             <br>
-            <button type="submit" class="interactive-btn">Отправить</button>
+            <div class="btn-container">
+              <button type="submit" class="interactive-btn">Отправить</button>
+            </div>
           </form>
         </div>
       </div>
@@ -438,13 +251,13 @@
           <h4 class="adapt_text">Инструкция по загрузке изображения в набор данных:</h4>
           <br>
           <ol class="adapt_text_less">
-            <li> Из выпадающегося списка выберите наименование заболевания</li>
-            <li> Нажмите на кнопку "Выбор файла" и выберите нужное изображение в формате jpg</li>
+            <li> Заполните форму</li>
+            <li> Загрузите нужное изображение в формате jpg</li>
             <li> Нажмите кнопку "Отправить"</li>
           </ol>
         </div>
       </div>
-      </section>
+<%--      </section>--%>
     </div>
   </div>
 
@@ -452,7 +265,14 @@
 
 
 
-
+  <footer class="site-footer">
+    <div class="footer-content">
+      <h2>Свяжитесь с нами</h2>
+      <p>Если у вас есть вопросы или предложения, пожалуйста, напишите нам:</p>
+      <a href="mailto:04200620z@gmail.com" class="contact-email">04200620z@gmail.com</a>
+      <p>Мы всегда рады помочь вам!</p>
+    </div>
+  </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
