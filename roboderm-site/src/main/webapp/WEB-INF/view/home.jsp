@@ -28,12 +28,6 @@
                 <li class="nav-item">
                   <a class="nav-link adapt_text " href="diagnoses/todownload">Загрузка изображений в набор данных</a>
                 </li>
-                  <li class = "nav-item">
-                      <a class="nav-link adapt_text" href="error/show404">Error404</a>
-                  </li>
-                  <li class = "nav-item">
-                      <a class="nav-link adapt_text" href="error/show500">Error500</a>
-                  </li>
               </ul>
             </div>
           </div>
