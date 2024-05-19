@@ -67,7 +67,7 @@ public class AnalysisController {
 
             } catch (IOException e) {
                 e.printStackTrace();
-                return new ModelAndView("error_analysis"); // Возврат страницы ошибки, надо сделать эту страниицу
+                return new ModelAndView("error500"); // Возврат страницы ошибки, надо сделать эту страниицу
             }
         } else {
             modelAndView.addObject("message", "Файл пустой");
