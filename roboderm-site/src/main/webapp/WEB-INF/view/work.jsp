@@ -66,16 +66,34 @@
     </div>
   </div>
   <script>
+      function parseData(str) {
+          var match = str.match(/(.+?)\s*\(.*?\)\s*(\d+\.\d+)%/);
+          return match ? { name: match[1], value: parseFloat(match[2]) } : null;
+      }
+
+      // Распарсить данные
+      var parsedRes1 = parseData(${res1});
+      var parsedRes2 = parseData(${res2});
+      var parsedRes3 = parseData(${res3});
+
+      // Создать массивы labels и data
+      var labels = [parsedRes1.name, parsedRes2.name, parsedRes3.name, 'Остальные'];
+      var data = [
+          parsedRes1.value,
+          parsedRes2.value,
+          parsedRes3.value,
+          100 - (parsedRes1.value + parsedRes2.value + parsedRes3.value)
+      ];
     var ctx = document.getElementById('myPieChart').getContext('2d');
     var myPieChart = new Chart(ctx, {
       type: 'pie',
       data: {
         // labels: ['${res1}', '${res2}', '${res3}', 'Остальные'],
-        labels: ['${res3}', 'Result 2', 'Result 3', 'Result 4'],
+        labels: labels,
         datasets: [{
           label: 'Results',
           <%--data: [${res1}, ${res2}, ${res3}, 100-(${res1}+${res2}+${res3})], // замените res1, res2, res3 на ваши данные--%>
-          data: [20, 30, 10, 100-(20+30+10)], // замените res1, res2, res3 на ваши данные
+          data: data, // замените res1, res2, res3 на ваши данные
 
           backgroundColor: [
             'rgba(255, 99, 132, 0.5)',
@@ -117,7 +135,7 @@
             <div class="image-upload-container ">
                 <div class="image-upload-container2">
                     <img src="${pageContext.request.contextPath}/images/download2.png" class="upload-image">
-                    <input type="file" name="myfile1" onchange="previewFile()" class="file-input">
+                    <input type="file" name="myfile1" onchange="previewFile()" class="file-input" required>
                     <script>function previewFile(){
                         var preview = document.querySelector('.img-preview'); //selects the query named img
                         var file    = document.querySelector('input[type=file]').files[0]; //sames as here

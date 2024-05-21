@@ -215,7 +215,7 @@
             <div class="image-upload-container ">
             <div class="image-upload-container2">
               <img src="${pageContext.request.contextPath}/images/download2.png" class="upload-image">
-              <input type="file" name="myfile1" onchange="previewFile()" class="file-input">
+              <input type="file" name="myfile1" onchange="previewFile()" class="file-input" required>
               <script>function previewFile(){
                 var preview = document.querySelector('.img-preview'); //selects the query named img
                 var file    = document.querySelector('input[type=file]').files[0]; //sames as here
