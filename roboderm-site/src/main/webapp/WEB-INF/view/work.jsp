@@ -78,17 +78,17 @@
 
       // Создать массивы labels и data
       var labels = [parsedRes1.name, parsedRes2.name, parsedRes3.name, 'Остальные'];
-      var data = [
-          parsedRes1.value,
-          parsedRes2.value,
-          parsedRes3.value,
-          100 - (parsedRes1.value + parsedRes2.value + parsedRes3.value)
-      ];
+      // var data = [
+      //     parsedRes1.value,
+      //     parsedRes2.value,
+      //     parsedRes3.value,
+      //     100 - (parsedRes1.value + parsedRes2.value + parsedRes3.value)
+      // ];
+      var data = [12, 32, 53, 100 - 12 - 32 - 53]
     var ctx = document.getElementById('myPieChart').getContext('2d');
     var myPieChart = new Chart(ctx, {
       type: 'pie',
       data: {
-        // labels: ['${res1}', '${res2}', '${res3}', 'Остальные'],
         labels: labels,
         datasets: [{
           label: 'Results',
