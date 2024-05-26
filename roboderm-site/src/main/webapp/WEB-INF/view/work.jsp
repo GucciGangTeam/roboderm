@@ -118,6 +118,11 @@
         title: {
           display: true,
           text: 'Results Pie Chart'
+        },
+        plugins: {
+          datalabels: {
+            color: 'black' // Цвет текста данных на диаграмме
+          }
         }
       }
     });
@@ -160,7 +165,7 @@
               </div>
 
           </form>
-        </div>  
+        </div>
       </div>
       <div class="col-lg-5" >
         <div class="container_help py-4">
@@ -174,7 +179,7 @@
       </div>
     </div>
   </div>
-  
+
 
 
 
