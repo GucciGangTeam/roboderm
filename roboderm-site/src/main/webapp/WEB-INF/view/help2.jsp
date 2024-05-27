@@ -7,7 +7,6 @@
     <title>Roboderm: пополнение набора данных</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href=${pageContext.request.contextPath}/styles/style.css >
-  <script src=”${pageContext.request.contextPath}scripts/myScript.js”></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
@@ -251,13 +250,12 @@
           <h4 class="adapt_text">Инструкция по загрузке изображения в набор данных:</h4>
           <br>
           <ol class="adapt_text_less">
-            <li> Заполните форму</li>
-            <li> Загрузите нужное изображение в формате jpg</li>
+            <li> Из выпадающегося списка выберите наименование заболевания</li>
+            <li> Нажмите на кнопку "Выбор файла" и выберите нужное изображение в формате jpg</li>
             <li> Нажмите кнопку "Отправить"</li>
           </ol>
         </div>
       </div>
-<%--      </section>--%>
     </div>
   </div>
 
@@ -269,7 +267,7 @@
     <div class="footer-content">
       <h2>Свяжитесь с нами</h2>
       <p>Если у вас есть вопросы или предложения, пожалуйста, напишите нам:</p>
-      <a href="mailto:04200620z@gmail.com" class="contact-email">04200620z@gmail.com</a>
+      <a href="mailto:roboderm@gmail.com" class="contact-email">roboderm@gmail.com</a>
       <p>Мы всегда рады помочь вам!</p>
     </div>
   </footer>

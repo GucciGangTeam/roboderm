@@ -84,8 +84,8 @@
                         <div class="accordion-body">
 
                             <ol class="adapt_text_less">
-                                <li> Перейдите во вкладку "Распознавание заболеваний".</li>
-                                <li> Нажмите на кнопку "Обзор" и выберите нужное изображение в формате jpg</li>
+                                <li> Перейдите во вкладку "Распознавание заболеваний"</li>
+                                <li> Выберите нужное изображение</li>
                                 <li> Нажмите кнопку "Отправить" и ожидайте результата </li>
                             </ol>
                         </div>
@@ -142,7 +142,7 @@
         <div class="footer-content">
             <h2>Свяжитесь с нами</h2>
             <p>Если у вас есть вопросы или предложения, пожалуйста, напишите нам:</p>
-            <a href="mailto:04200620z@gmail.com" class="contact-email">04200620z@gmail.com</a>
+            <a href="mailto:roboderm@gmail.com" class="contact-email">roboderm@gmail.com</a>
             <p>Мы всегда рады помочь вам!</p>
         </div>
     </footer>

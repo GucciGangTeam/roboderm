@@ -92,7 +92,7 @@
     <div class="footer-content">
       <h2>Свяжитесь с нами</h2>
       <p>Если у вас есть вопросы или предложения, пожалуйста, напишите нам:</p>
-      <a href="mailto:04200620z@gmail.com" class="contact-email">04200620z@gmail.com</a>
+      <a href="mailto:roboderm@gmail.com" class="contact-email">roboderm@gmail.com</a>
       <p>Мы всегда рады помочь вам!</p>
     </div>
   </footer>
