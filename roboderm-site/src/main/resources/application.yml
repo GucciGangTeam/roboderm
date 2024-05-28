@@ -5,11 +5,13 @@ spring:
       suffix: .jsp
   application:
     name: web-api
+    
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/mediasoft_db
     username: postgres
     password: 1
+
 
 logging:
   level:
