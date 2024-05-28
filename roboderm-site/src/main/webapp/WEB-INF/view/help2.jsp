@@ -51,11 +51,12 @@
       <div class="col-lg-7">
 
         <div class="container-form panel-body ">
-          <form class="form-horizontal adapt_text_less row" role="form" action="../diagnoses/downloaded" method="post" enctype="multipart/form-data">
+<%--          <form class="form-horizontal adapt_text_less row" role="form" action="../diagnoses/downloaded" method="post" enctype="multipart/form-data">--%>
+          <form class="form-horizontal adapt_text_less row" role="form" action="http://localhost/rest/v1/diagnosis" method="post" enctype="multipart/form-data">
 
             <div class="col-md-6 form-group">
-              <label for="diagnoz" class=" control-label">Диагноз</label>
-              <select name="dir_name" class="form-select" required id="diagnoz">
+              <label for="disease" class=" control-label">Диагноз</label>
+              <select name="dir_name" class="form-select" required id="disease">
                 <option selected disabled value="">Выберите диагноз</option>
                 <option value="Acne">Acne</option>
                 <option value="Actinic Keratosis">Actinic Keratosis</option>
@@ -73,8 +74,8 @@
               </select>
             </div>
             <div class="col-md-6 form-group">
-              <label for="phototype" class=" control-label">Фототип кожи</label>
-              <select name="dir_name" class="form-select" id="phototype" required>
+              <label for="skin_type" class=" control-label">Фототип кожи</label>
+              <select name="dir_name" class="form-select" id="skin_type" required>
                 <option selected disabled value="">Выберите фототип кожи</option>
                 <option value="Nord">Нордический</option>
                 <option value="Evro">Темный европейский</option>
@@ -84,25 +85,25 @@
               </select>
             </div>
             <div class="col-md-6 form-group">
-              <label for="ageInput" class=" control-label">Возраст</label>
-              <input type="number" class="form-control" id="ageInput" name="age"  placeholder="Введите возраст" required>
+              <label for="age" class=" control-label">Возраст</label>
+              <input type="number" class="form-control" id="age" name="age"  placeholder="Введите возраст" required>
             </div>
             <div class="col-md-6 form-group">
-              <label for="diametrInput" class="control-label">Диаметр</label>
-              <input type="number" class="form-control" id="diametrInput" name="diametr"  placeholder="Введите диаметр в мм" required>
+              <label for="diameter" class="control-label">Диаметр</label>
+              <input type="number" class="form-control" id="diameter" name="diametr"  placeholder="Введите диаметр в мм" required>
             </div>
             <div class="col-md-6 form-group">
-              <label for="daysInput" class=" control-label">Длительность заболевания</label>
-              <input type="number" class="form-control" id="daysInput" name="days"  placeholder="Введите длительность в днях" required>
+              <label for="desease_duration_day" class=" control-label">Длительность заболевания</label>
+              <input type="number" class="form-control" id="desease_duration_day" name="days"  placeholder="Введите длительность в днях" required>
             </div>
             <div class="col-md-6 form-group">
-              <label for="placeInput" class=" control-label">Локализация заболевания</label>
-              <input type="text" class="form-control" id="placeInput" name="place"  placeholder="Введите часть тела" required>
+              <label for="location" class=" control-label">Локализация заболевания</label>
+              <input type="text" class="form-control" id="location" name="place"  placeholder="Введите часть тела" required>
             </div>
             <div class="col-md-12 form-group">
-              <label for="feelingsInput" class=" control-label">Субъективные ощущения</label>
+              <label for="subjective_feelings" class=" control-label">Субъективные ощущения</label>
 <%--              <input type="text" class="form-control" id="feelingsInput" name="feelings"  placeholder="Зуд, жжение, боль..." required>--%>
-              <textarea class="form-control" id="feelingsInput" name="feelings"  placeholder="Зуд, жжение, боль..." required rows="3"></textarea>
+              <textarea class="form-control" id="subjective_feelings" name="feelings"  placeholder="Зуд, жжение, боль..." required rows="3"></textarea>
             </div>
 
 
@@ -111,13 +112,13 @@
 <%--              <label class="control-label " for="gender">Пол обследуемого</label>--%>
               <div class="col-sm-10" id="gender">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="genderName" id="gridRadios1" value="option1" required>
+                  <input class="form-check-input" type="radio" name="genderName" id="gridRadios1" value="0" required>
                   <label class="form-check-label" for="gridRadios1">
                     Женский
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="genderName" id="gridRadios2" value="option2" >
+                  <input class="form-check-input" type="radio" name="genderName" id="gridRadios2" value="1" >
                   <label class="form-check-label" for="gridRadios2">
                     Мужской
                   </label>
@@ -125,16 +126,16 @@
               </div>
             </fieldset>
             <fieldset class="form-group">
-              <label for="anamnez" class="control-label ">Семейный анамнез</label>
-              <div class="col-sm-10" id="anamnez">
+              <label for="family_history" class="control-label ">Семейный анамнез</label>
+              <div class="col-sm-10" id="family_history">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="anamnezName" id="gridRadios3" value="option3" required>
+                  <input class="form-check-input" type="radio" name="anamnezName" id="gridRadios3" value="0" required>
                   <label class="form-check-label" for="gridRadios3">
                     Не отягощен
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="anamnezName" id="gridRadios4" value="option4">
+                  <input class="form-check-input" type="radio" name="anamnezName" id="gridRadios4" value="1">
                   <label class="form-check-label" for="gridRadios4">
                     Отягощен
                   </label>
@@ -143,16 +144,16 @@
             </fieldset>
 
             <fieldset class="form-group">
-              <label class="control-label " for="izyavlenie">Наличие изъявления</label>
-              <div class="col-sm-10" id="izyavlenie">
+              <label class="control-label " for="ulceleration">Наличие изъявления</label>
+              <div class="col-sm-10" id="ulceleration">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="izyavlenieName" id="gridRadios5" value="option5" required>
+                  <input class="form-check-input" type="radio" name="izyavlenieName" id="gridRadios5" value="0" required>
                   <label class="form-check-label" for="gridRadios5">
                     Не имеется
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="izyavlenieName" id="gridRadios6" value="option6" >
+                  <input class="form-check-input" type="radio" name="izyavlenieName" id="gridRadios6" value="1" >
                   <label class="form-check-label" for="gridRadios6">
                     Имеется
                   </label>
@@ -160,16 +161,16 @@
               </div>
             </fieldset>
             <div class="form-group">
-              <label class="control-label " for="uvelichenie">Было увеличение в течение года</label>
-              <div class="col-sm-10" id="uvelichenie">
+              <label class="control-label " for="increase">Было увеличение в течение года</label>
+              <div class="col-sm-10" id="increase">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="uvelichenieName" id="gridRadios7" value="option7" required>
+                  <input class="form-check-input" type="radio" name="uvelichenieName" id="gridRadios7" value="0" required>
                   <label class="form-check-label" for="gridRadios7">
                     Нет
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="uvelichenieName" id="gridRadios8" value="option8" >
+                  <input class="form-check-input" type="radio" name="uvelichenieName" id="gridRadios8" value="1" >
                   <label class="form-check-label" for="gridRadios8">
                     Да
                   </label>
@@ -178,16 +179,16 @@
             </div>
 
             <div class="form-group">
-              <label class="control-label " for="burn">Наличие солнечных ожогов</label>
-              <div class="col-sm-10" id="burn">
+              <label class="control-label " for="sunburn">Наличие солнечных ожогов</label>
+              <div class="col-sm-10" id="sunburn">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="burnName" id="gridRadios9" value="option9" required>
+                  <input class="form-check-input" type="radio" name="burnName" id="gridRadios9" value="0" required>
                   <label class="form-check-label" for="gridRadios9">
                     Нет
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="burnName" id="gridRadios10" value="option10" >
+                  <input class="form-check-input" type="radio" name="burnName" id="gridRadios10" value="1" >
                   <label class="form-check-label" for="gridRadios10">
                     Да
                   </label>
@@ -195,16 +196,16 @@
               </div>
             </div>
             <div class="form-group">
-              <label class="control-label" for="stayOnSun">Было ли длительное пребывание на солнце</label>
-              <div class="col-sm-10" id="stayOnSun">
+              <label class="control-label" for="prolonger_sun_exposure">Было ли длительное пребывание на солнце</label>
+              <div class="col-sm-10" id="prolonger_sun_exposure">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="stayOnSunName" id="gridRadios11" value="option11" required>
+                  <input class="form-check-input" type="radio" name="stayOnSunName" id="gridRadios11" value="0" required>
                   <label class="form-check-label" for="gridRadios11">
                     Нет
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="stayOnSunName" id="gridRadios12" value="option12" >
+                  <input class="form-check-input" type="radio" name="stayOnSunName" id="gridRadios12" value="1" >
                   <label class="form-check-label" for="gridRadios12">
                     Да
                   </label>
@@ -214,7 +215,9 @@
             <div class="image-upload-container ">
             <div class="image-upload-container2">
               <img src="${pageContext.request.contextPath}/images/download2.png" class="upload-image">
+
               <input type="file" name="myfile1" onchange="previewFile()" class="file-input" required>
+
               <script>function previewFile(){
                 var preview = document.querySelector('.img-preview'); //selects the query named img
                 var file    = document.querySelector('input[type=file]').files[0]; //sames as here
@@ -233,6 +236,83 @@
 <%--              <input type="file" onchange="previewFile()"><br>--%>
             </div>
             </div>
+            <script>
+              document.getElementById('diagnosisForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+                const formData = new FormData();
+                formData.append('disease', document.getElementById('disease').value);
+                formData.append('skin_type', document.getElementById('skin_type').value);
+                formData.append('age', document.getElementById('age').value);
+                formData.append('diameter', document.getElementById('diameter').value);
+                formData.append('disease_duration_day', document.getElementById('disease_duration_day').value);
+                formData.append('location', document.getElementById('location').value);
+                formData.append('subjective_feelings', document.getElementById('subjective_feelings').value);
+                formData.append('gender', document.getElementById('gender').value);
+                formData.append('family_history', document.getElementById('family_history').value);
+                formData.append('ulceration', document.getElementById('ulceration').value);
+                formData.append('increase', document.getElementById('increase').value);
+                formData.append('sunburn', document.getElementById('sunburn').value);
+                formData.append('prolonged_sun_exposure', document.getElementById('prolonged_sun_exposure').value);
+                formData.append('img_file', document.getElementById('img_file').files[0]);
+
+                fetch('http://localhost/rest/v1/diagnosis', {
+                  method: 'POST',
+                  body: formData
+                })
+                        .then(response => response.json())
+                        .then(data => {
+                          alert('Success: ' + data.id);
+                        })
+                        .catch(error => {
+                          console.error('Error:', error);
+                          alert('An error occurred. Please try again.');
+                        });
+              });
+            </script>
+            <!-- скрипт, который обработает нажатие на кнопку и отправит данные на сервер -->
+<%--            <script>--%>
+<%--              // эта функция сработает при нажатии на кнопку--%>
+<%--              function sendJSON() {--%>
+<%--                // с помощью jQuery обращаемся к элементам на странице по их именам--%>
+<%--                let desease = document.querySelector('#desease');--%>
+<%--                let skin_type = document.querySelector('#skin_type');--%>
+<%--                let age = document.querySelector('#age');--%>
+<%--                let diameter = document.querySelector('#diameter');--%>
+<%--                let desease_duration_day = document.querySelector('#desease_duration_day');--%>
+<%--                let location = document.querySelector('#location');--%>
+<%--                let gender = document.querySelector('#gender');--%>
+<%--                let family_history = document.querySelector('#family_history');--%>
+<%--                let ulceration = document.querySelector('#ulceration');--%>
+<%--                let increase = document.querySelector('#increase');--%>
+<%--                let sunburn = document.querySelector('#sunburn');--%>
+<%--                let prolonger_sun_exposure = document.querySelector('#prolonger_sun_exposure');--%>
+
+<%--                --%>
+
+<%--                // а вот сюда мы поместим ответ от сервера--%>
+<%--                let result = document.querySelector('.result');--%>
+<%--                // создаём новый экземпляр запроса XHR--%>
+<%--                let xhr = new XMLHttpRequest();--%>
+<%--                // адрес, куда мы отправим нашу JSON-строку--%>
+<%--                let url = "http://mihailmaximov.ru/projects/json/json.php";--%>
+<%--                // открываем соединение--%>
+<%--                xhr.open("POST", url, true);--%>
+<%--                // устанавливаем заголовок — выбираем тип контента, который отправится на сервер, в нашем случае мы явно пишем, что это JSON--%>
+<%--                xhr.setRequestHeader("Content-Type", "application/json");--%>
+<%--                // когда придёт ответ на наше обращение к серверу, мы его обработаем здесь--%>
+<%--                xhr.onreadystatechange = function () {--%>
+<%--                  // если запрос принят и сервер ответил, что всё в порядке--%>
+<%--                  if (xhr.readyState === 4 && xhr.status === 200) {--%>
+<%--                    // выводим то, что ответил нам сервер — так мы убедимся, что данные он получил правильно--%>
+<%--                    result.innerHTML = this.responseText;--%>
+<%--                  }--%>
+<%--                };--%>
+<%--                // преобразуем наши данные JSON в строку--%>
+<%--                var data = JSON.stringify({ "name": name.value, "lastname": lastname.value });--%>
+<%--                // когда всё готово, отправляем JSON на сервер--%>
+<%--                xhr.send(data);--%>
+<%--              }--%>
+<%--            </script>--%>
 
             <div class="img-preview-container">
               <img class="img-preview" alt="">
