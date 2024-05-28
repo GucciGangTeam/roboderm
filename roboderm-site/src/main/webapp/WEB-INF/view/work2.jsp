@@ -49,7 +49,7 @@
             <div class="image-upload-container ">
               <div class="image-upload-container2">
                 <img src="${pageContext.request.contextPath}/images/download2.png" class="upload-image">
-                <input type="file" name="myfile1" onchange="previewFile()" class="file-input">
+                <input type="file" name="myfile1" onchange="previewFile()" class="file-input" required>
                 <script>function previewFile(){
                   var preview = document.querySelector('.img-preview'); //selects the query named img
                   var file    = document.querySelector('input[type=file]').files[0]; //sames as here
@@ -92,7 +92,7 @@
     <div class="footer-content">
       <h2>Свяжитесь с нами</h2>
       <p>Если у вас есть вопросы или предложения, пожалуйста, напишите нам:</p>
-      <a href="mailto:04200620z@gmail.com" class="contact-email">04200620z@gmail.com</a>
+      <a href="mailto:roboderm@gmail.com" class="contact-email">roboderm@gmail.com</a>
       <p>Мы всегда рады помочь вам!</p>
     </div>
   </footer>

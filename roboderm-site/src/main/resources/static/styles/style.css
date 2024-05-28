@@ -110,7 +110,7 @@ div.logotip{
     display:flex ;
     justify-content: center;
     background-color:white;
-
+    padding:3%;
 }
 .image-upload-container {
 
