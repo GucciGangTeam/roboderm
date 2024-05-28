@@ -7,6 +7,20 @@ services:
       - 80:80
     networks:
       - roboderm-network
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/${DB_NAME}
+      - SPRING_DATASOURCE_USERNAME=${DB_USER}
+      - SPRING_DATASOURCE_PASSWORD=${DB_PASS}
+    volumes:
+      - ./uploads:/path/to/uploadDir
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: curl --fail http://localhost:8080/rest/v1/health | grep UP || exit 1
+      interval: 10s
+      timeout: 5s
+      retries: 3
 
   roboderm-neural-network:
     build: neural-network/
@@ -14,6 +28,29 @@ services:
       - 5000:5000
     networks:
       - roboderm-network
+
+  db:
+    container_name: roboderm-db
+    image: postgres:16-alpine
+    user: postgres
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASS}
+      POSTGRES_HOST_AUTH_METHOD: "trust"
+      PGDATA: "/var/lib/postgresql/data/pgdata"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    healthcheck:
+      test: pg_isready -d ${DB_NAME}
+      interval: 5s
+      timeout: 5s
+      retries: 3
+
+volumes:
+  db-data:
 
 networks:
   roboderm-network:

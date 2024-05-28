@@ -35,7 +35,7 @@ public class DiagnosisRequest {
     @NotBlank
     private String location;
 
-    private Set<String> subjectiveFeelings;
+    private String subjectiveFeelings;
 
     @NotBlank
     private Boolean gender;
