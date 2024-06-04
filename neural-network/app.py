@@ -8,7 +8,7 @@ from tensorflow.keras.preprocessing import image_dataset_from_directory #Для 
 
 app = Flask(__name__)
 
-# Предположим, у вас есть функция для обработки изображения и получения диагноза
+
 def analyze_skin_disease():
     model = load_model('static/model/Doctor13.h5')  # Загружаем нейросеть
 
